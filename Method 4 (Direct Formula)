@@ -1,0 +1,21 @@
+#include<stdio.h> 
+#include<math.h> 
+
+int getFibo(double phi, int n) {
+    
+    for(int i = 0; i <= n; i++)
+    {
+        // setting .0 precision so all leading decimals are not printed
+        // else would have printed 1.000000, 1.000000, 2.000000 so on....
+        printf("%.0lf, ",round(pow(phi, i) / sqrt(5)));
+    }
+}
+
+int main ()
+{
+    int n = 15;
+    double phi = (1 + sqrt(5)) / 2;
+    getFibo(phi, n);
+    
+    return 0;
+}
